@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('hello') {
             steps {
-                bat 'echo $AAA_SECRET_TEXT > .env'                
+                bat 'echo $AAA_SECRET_TEXT'                
             }
         }
     }
