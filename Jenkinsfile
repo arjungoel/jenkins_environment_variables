@@ -9,8 +9,8 @@ pipeline {
         stage('hello') {
             steps {
                 bat 'echo $AAA_SECRET_TEXT'     
-                echo "My name is ${name}"   
-                echo "I am working as a ${job_title}"
+                bat "echo My name is ${name}"   
+                bat "echo I am working as a ${job_title}"
                 sh 'printenv'
             }
         }
