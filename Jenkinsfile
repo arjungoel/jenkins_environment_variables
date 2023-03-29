@@ -1,16 +1,36 @@
 pipeline {
-    agent any
-    environment {
-        AAA_SECRET_TEXT = credentials('secret-text')
-        name = 'Arjun'
-        job_title = 'Senior AWS DevOps Engineer'
-    }
+    agent any 
     stages {
-        stage('hello') {
+        stage('develop') {
+            when {
+                branch 'develop'
+            }
+            environment {
+                NAME = 'Arjun'
+                JOB = 'Senior AWS DevOps Engineer'
+            }
             steps {
-                bat 'echo $AAA_SECRET_TEXT'     
-                bat "echo My name is ${name}"   
-                bat "echo I am working as a ${job_title}"
+                bat 'del .env'
+                bat 'rem. .env'
+                bat "echo NAME=${NAME} >>.env"
+                bat "echo JOB=${JOB} >> .env"
+                bat "echo ${name} is working as ${job_title}"
+            }
+        }
+        stage('master') {
+            when {
+                branch 'main'
+            }
+            environment {
+                NAME = 'Harsh'
+                JOB = 'Senior Data Engineer'
+            }
+            steps {
+                bat 'del .env'
+                bat 'rem. .env'
+                bat "echo NAME=${NAME} >>.env"
+                bat "echo JOB=${JOB} >> .env"
+                bat "echo ${name} is working as ${job_title}"
             }
         }
     }
