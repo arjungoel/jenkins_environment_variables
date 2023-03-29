@@ -10,7 +10,7 @@ pipeline {
             }
             steps {
                 bat "echo My name is ${name}"   
-                bat "echo I am working as a ${job_title}"
+                bat "echo I am working as ${job_title}"
             }
         }
 }
