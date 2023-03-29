@@ -6,13 +6,13 @@ pipeline {
                 branch 'develop'
             }
             environment {
-                name = 'Arjun'
-                job_title = 'Senior AWS DevOps Engineer'
+                NAME = 'Arjun'
+                JOB = 'Senior AWS DevOps Engineer'
             }
             steps {
                 bat 'rem. .env'
-                bat 'echo name=${name} >>.env'
-                bat 'echo job_title=${job_title} >> .env'
+                bat 'echo name=${NAME} >>.env'
+                bat 'echo job_title=${JOB} >> .env'
                 bat "echo ${name} is working as ${job_title}"
             }
         }
