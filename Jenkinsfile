@@ -22,7 +22,7 @@ pipeline {
                 branch 'main'
             }
             environment {
-                NAME = 'Harsh'
+                NAME = 'Harsh Goel'
                 JOB = 'Senior Data Engineer'
                 COMPANY = 'XYZ'
             }
