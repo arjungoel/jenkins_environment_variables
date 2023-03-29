@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('develop') {
             when {
-                branch 'develop'
+                branch 'develop Goel'
             }
             environment {
                 NAME = 'Arjun'
