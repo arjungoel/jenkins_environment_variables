@@ -1,8 +1,10 @@
 pipeline {
     agent any 
-    stage('develop') {
-        steps {
-            bat "echo hello"
+    stages {
+        stage('develop') {
+            steps {
+                bat "echo hello"
+            }
         }
     }
 }
