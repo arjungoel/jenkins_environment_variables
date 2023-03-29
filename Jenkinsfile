@@ -22,15 +22,17 @@ pipeline {
                 branch 'main'
             }
             environment {
-                NAME = 'Harsh Goel'
+                NAME = 'Harsh'
                 JOB = 'Senior Data Engineer'
+                COMPANY = 'XYZ'
             }
             steps {
                 bat 'del .env'
                 bat 'rem. .env'
                 bat "echo NAME=${NAME} >>.env"
                 bat "echo JOB=${JOB} >> .env"
-                bat "echo ${name} is working as ${job_title}"
+                bat "echo COMPANY=${COMPANY} >> .env"
+                bat "echo ${name} is working as ${job_title} for ${COMPANY}"
             }
         }
     }
