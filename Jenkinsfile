@@ -10,7 +10,7 @@ pipeline {
                 JOB = 'Senior AWS DevOps Engineer'
             }
             steps {
-                bat 'rm .env'
+                bat 'del .env'
                 bat 'rem. .env'
                 bat "echo NAME=${NAME} >>.env"
                 bat "echo JOB=${JOB} >> .env"
