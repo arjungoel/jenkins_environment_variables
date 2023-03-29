@@ -10,9 +10,10 @@ pipeline {
                 JOB = 'Senior AWS DevOps Engineer'
             }
             steps {
+                bat 'rd .env'
                 bat 'rem. .env'
-                bat 'echo name=${NAME} >>.env'
-                bat 'echo job_title=${JOB} >> .env'
+                bat "echo NAME=${NAME} >>.env"
+                bat "echo JOB=${JOB} >> .env"
                 bat "echo ${name} is working as ${job_title}"
             }
         }
